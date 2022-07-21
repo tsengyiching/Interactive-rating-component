@@ -1,15 +1,18 @@
 import React from 'react'
 import './App.css'
 import { ReactComponent as IconStar } from './images/icon-star.svg'
-import Rating from './Rating'
+import Rating from './components/Rating'
 
 function App() {
   const arr = [1, 2, 3, 4, 5]
   const menu: JSX.Element[] = []
   const [ratingValue, setRatingValue] = React.useState(0)
 
-  const handleClick = (event: any) => {
-    setRatingValue(event.target.value)
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault()
+
+    const button: HTMLButtonElement = event.currentTarget
+    setRatingValue(Number(button.value))
   }
 
   arr.forEach((num) => {
@@ -44,7 +47,7 @@ function App() {
         </p>
       </div>
       <div className='rating'>{menu}</div>
-      <div className='butt'>SUBMIT</div>
+      <button className='butt'>SUBMIT</button>
     </div>
   )
 }
