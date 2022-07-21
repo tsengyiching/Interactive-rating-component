@@ -2,7 +2,8 @@
 :root {
   --White: hsl(0, 0%, 100%);
   --Light-Grey: hsl(217, 12%, 63%);
-  --Medium-Grey: hsl(218, 7%, 32%);
+  --Medium-Grey: hsl(216, 12%, 54%);
+  --Grey: hsl(216, 12%, 25%);
   --Dark-Blue: hsl(213, 19%, 18%);
   --Very-Dark-Blue: hsl(216, 12%, 8%);
   --Orange: hsl(25, 97%, 53%);
@@ -30,22 +31,39 @@ body {
   justify-content: space-evenly;
 }
 
-.Icon,
-.Header,
-.Para,
-.Notes,
-.Butt {
+.icon,
+.header,
+.para,
+.rating,
+.butt {
   margin: 0px 20px 0px 20px;
 }
 
-.Cercle {
-  background-color: var(--Medium-Grey);
+.circle {
+  background-color: var(--Grey);
   width: 50px;
   height: 50px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--Medium-Grey);
+}
+
+.not-active {
+  cursor: pointer;
+  background-color: var(--Grey);
+}
+
+.not-active:hover {
+  background-color: var(--Orange);
+  color: var(--White);
+}
+
+.active {
+  cursor: pointer;
+  background-color: var(--Medium-Grey);
+  color: var(--White);
 }
 
 h2 {
@@ -62,25 +80,27 @@ p {
   padding: 0;
 }
 
-.Notes {
+.rating {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.Butt {
-  color: var(--White);
+.butt {
   background-color: var(--Orange);
   height: 40px;
   border-radius: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.Butt p {
+  cursor: pointer;
   color: var(--White);
   font-weight: 700;
+}
+
+.butt:hover {
+  background-color: var(--White);
+  color: var(--Orange);
 }
 
 @media screen and (max-width: 400px) {
