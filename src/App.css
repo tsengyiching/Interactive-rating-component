@@ -21,22 +21,37 @@ body {
   align-items: center;
 }
 
-.App {
-  background-color: var(--Dark-Blue);
+.App,
+.rating,
+.thank-you {
   height: 400px;
   width: 400px;
+}
+
+.App {
+  background-color: var(--Dark-Blue);
   border-radius: 20px;
+}
+
+.rating {
   display: flex;
   flex-flow: column wrap;
+  justify-content: space-around;
+}
+
+.thank-you {
+  display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
 }
 
 .icon,
 .header,
 .para,
-.rating,
+.menu,
 .butt {
-  margin: 0px 20px 0px 20px;
+  margin: 0px 30px 0px 30px;
 }
 
 .circle {
@@ -81,7 +96,7 @@ p {
   padding: 0;
 }
 
-.rating {
+.menu {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -103,6 +118,28 @@ p {
 .butt:hover {
   background-color: var(--White);
   color: var(--Orange);
+}
+
+.select {
+  background-color: var(--Grey);
+  width: 180px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+}
+
+.select p {
+  color: var(--Orange);
+}
+
+.para-thank-you {
+  height: 70px;
+}
+
+.para-thank-you p {
+  text-align: center;
 }
 
 @media screen and (max-width: 400px) {

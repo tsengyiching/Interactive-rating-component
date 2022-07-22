@@ -7,7 +7,7 @@ interface RatingProps {
   handleClick: (event: React.MouseEvent<HTMLButtonElement>) => void
 }
 
-function Rating({ ...props }: RatingProps) {
+function RatingButton({ ...props }: RatingProps) {
   const circle = 'circle'
 
   return (
@@ -17,4 +17,4 @@ function Rating({ ...props }: RatingProps) {
   )
 }
 
-export default Rating
+export default RatingButton
