@@ -41,42 +41,42 @@ function InteractiveRatingComp() {
   }
 
   return (
-    <div className='App'>
+    <div className='App rating'>
       {!submit ? (
-        <div className='rating'>
-          <div className='icon circle'>
+        <>
+          <header className='icon circle'>
             <IconStar />
-          </div>
-          <div className='header'>
-            <h2>How did we do?</h2>
-          </div>
-          <div className='para'>
+          </header>
+          <main className='rating-main'>
+            <h1>How did we do?</h1>
             <p>
               Please let us know how we did with your support request. All feedback is appreciated
               to help us to improve our offering!
             </p>
-          </div>
-          <div className='menu'>{menu}</div>
-          <button className='butt' onClick={handleSubmit}>
-            SUBMIT
-          </button>
-        </div>
+            <div className='menu'>{menu}</div>
+            <button className='butt' onClick={handleSubmit}>
+              SUBMIT
+            </button>
+          </main>
+        </>
       ) : (
-        <div className='thank-you'>
-          <div>
+        <>
+          <header className='thankyou'>
             <ThankYou />
-          </div>
-          <div className='select'>
-            <p>You selected {ratingValue} out of 5</p>
-          </div>
-          <div>
-            <h2>Thank you!</h2>
-          </div>
-          <div className='para para-thank-you'>
-            <p>We appreciate you taking the time to give a rating. </p>
-            <p>If you ever need more support, don&apos;t hesitate to get in touch!</p>
-          </div>
-        </div>
+          </header>
+          <main className='rating-main-thankyou'>
+            <div className='select'>
+              <p>You selected {ratingValue} out of 5</p>
+            </div>
+            <div>
+              <h1>Thank you!</h1>
+            </div>
+            <div className='para para-thank-you'>
+              <p>We appreciate you taking the time to give a rating. </p>
+              <p>If you ever need more support, don&apos;t hesitate to get in touch!</p>
+            </div>
+          </main>
+        </>
       )}
     </div>
   )
